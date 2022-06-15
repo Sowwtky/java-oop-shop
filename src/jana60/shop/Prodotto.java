@@ -6,18 +6,18 @@ public class Prodotto {
 
 	String marca;
 	String nome;
-	float prezzo;
+	double prezzo;
 	int iva;
 	
-	Prodotto(String marca, String nome, float prezzo, int iva) {
+	Prodotto(String marca, String nome, double prezzo, int iva) {
 		this.marca = marca;
 		this.nome = nome;
 		this.prezzo = prezzo;
 		this.iva = iva;
 	}
 	
-	float calcPrezzo () {
-		float prezzoIva = prezzo + (prezzo * iva) / 100;
+	double calcPrezzo () {
+		double prezzoIva = prezzo + (prezzo * iva) / 100;
 		return prezzoIva;
 	}
 	
