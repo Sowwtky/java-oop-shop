@@ -10,6 +10,7 @@ public class Prodotto {
 	int iva;
 	
 	Prodotto(String marca, String nome, double prezzo, int iva) {
+		super();
 		this.marca = marca;
 		this.nome = nome;
 		this.prezzo = prezzo;
@@ -23,7 +24,13 @@ public class Prodotto {
 	
 	DecimalFormat df = new DecimalFormat("###0.##");
 	String formatText () {
-		String formatStr = "Il prezzo totale del prodotto é " + df.format(calcPrezzo()) + "€";
+		String formatStr = df.format(calcPrezzo());
 		return formatStr;
+	}
+	
+	String infoProdotto() {
+		String dettagliProdotto = "Marca: " + marca + "\nNome: " + nome + "\nPrezzo: " + prezzo + "\nIva: " + iva; 
+		return dettagliProdotto;
+		
 	}
 }
